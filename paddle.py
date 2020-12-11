@@ -3,6 +3,7 @@ from turtle import Turtle
 class Paddle(Turtle):
 
   def __init__(self, width, height, color, cor_tuple):
+    """Creates a pong paddle"""
     super().__init__()
 
     self.up()
@@ -15,9 +16,11 @@ class Paddle(Turtle):
     
   
   def move_fd(self):
+    """Moves paddle forward"""
     self.fd(20)
 
   def move_bk(self):
+    """Moves paddle backward"""
     self.bk(20)
 
 
