@@ -19,8 +19,11 @@ class Ball(Turtle):
     self.goto(x, y)
     sleep(0.1)
 
-  def bounce(self):
-    """Ball bounces back"""
+  def bounce_y(self):
+    """Ball bounces back from wall"""
     self.y *= -1
 
+  def bounce_x(self):
+    """Ball bounces off paddle"""
+    self.x *= -1
 
