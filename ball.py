@@ -9,11 +9,18 @@ class Ball(Turtle):
     self.up()
     self.shape('circle')
     self.color('white')
+    self.x = 10
+    self.y = 10
 
   def move(self):
     """Moves ball"""
-    x = self.xcor() + 10
-    y = self.ycor() + 10
+    x = self.xcor() + self.x
+    y = self.ycor() + self.y
     self.goto(x, y)
     sleep(0.1)
+
+  def bounce(self):
+    """Ball bounces back"""
+    self.y *= -1
+
 

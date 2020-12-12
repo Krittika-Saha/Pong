@@ -18,9 +18,14 @@ screen.onkey(paddle_2.move_fd, 'w')
 screen.onkey(paddle_2.move_bk, 's')
 ball = Ball(1, 1, 'white')
 
+
 while True:
   ball.move()
   screen.update()
+
+  #Detect collision with wall
+  if ball.ycor() > 300 or ball.ycor() < -300:
+    ball.bounce()
 
 
 
