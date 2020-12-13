@@ -11,9 +11,10 @@ class Ball(Turtle):
     self.color('white')
     self.x = 10
     self.y = 10
+    self.speed('fastest')
 
-  def move(self):
-    """Moves ball"""
+  def move_r(self):
+    """Moves ball towards the right paddle"""
     x = self.xcor() + self.x
     y = self.ycor() + self.y
     self.goto(x, y)
@@ -27,3 +28,7 @@ class Ball(Turtle):
     """Ball bounces off paddle"""
     self.x *= -1
 
+  def reset_position(self):
+    """Resets balls position in the center position"""
+    self.goto(0,0)
+    self.bounce_x()
