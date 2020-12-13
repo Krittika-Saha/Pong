@@ -8,7 +8,7 @@ class Paddle(Turtle):
 
     self.up()
     self.shape('square')
-    self.turtlesize(stretch_wid = 1, stretch_len = 5)
+    self.turtlesize(stretch_wid = 0.5, stretch_len = 6)
     self.speed('fastest')
     self.color(color)
     self.goto(cor_tuple)
@@ -22,6 +22,10 @@ class Paddle(Turtle):
   def move_bk(self):
     """Moves paddle backward"""
     self.bk(20)
+
+  
+    
+
 
 
 

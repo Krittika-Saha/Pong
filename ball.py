@@ -9,16 +9,18 @@ class Ball(Turtle):
     self.up()
     self.shape('circle')
     self.color('white')
+    self.turtlesize(stretch_wid = 0.5, stretch_len = 0.5)
     self.x = 10
     self.y = 10
     self.speed('fastest')
+    self.sleep_timer = 0.1
 
   def move_r(self):
     """Moves ball towards the right paddle"""
     x = self.xcor() + self.x
     y = self.ycor() + self.y
     self.goto(x, y)
-    sleep(0.1)
+    sleep(self.sleep_timer)
 
   def bounce_y(self):
     """Ball bounces back from wall"""
